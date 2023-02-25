@@ -102,6 +102,7 @@ html{
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px repeat(3, 1fr);
+    gap:15px;
 }
 
 .wrapper{
@@ -221,4 +222,34 @@ html{
     background-color: #0ea5e9;
     border-radius: 20px;
     border:none;
+}
+
+.card{
+    background-color: white;
+    border-left: 6px solid orange;
+    border-radius: 10px;
+    padding:30px 15px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card>div{
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.projects>h2{
+    align-self:end;
+}
+
+.project-icons{
+    display: flex;
+    gap:20px;
+}
+
+.project-icons>img{
+    width:20px;
+    height: 20px;
 }
