@@ -20,14 +20,8 @@ html{
     grid-template-rows: 150px 1fr;
 }
 
-/* remove eventually borders */
-.main-container>div{
-    border:1px solid black; 
-}
-
 /* sidebar section */
 .sidebar{
-    /* for the main layout */
     grid-column: 1/2;
     grid-row: 1/3;
     padding:15px;
@@ -41,9 +35,41 @@ html{
     background-color:#0ea5e9;
 }
 
-.sidebar>div:nth-child(n+2)>p{
-    margin-bottom: 10px;
+.sidebar img{
+    width:20px;
+    height: 20px;
+    filter: invert(100%); /*turn svg's into white*/
 }
+
+.sidebar-first-div img{
+    width:40px;
+    height:40px;
+}
+
+.sidebar>*{
+    display:grid;
+    grid-template-columns: 40px 1fr;
+    gap:10px;
+}
+
+.sidebar>.sidebar-first-div{
+    align-items: center;
+}
+
+.sidebar>.sidebar-second-div{
+    grid-template-rows: repeat(6, 25px);
+    align-items: end;
+}
+
+.sidebar img{
+    justify-self: center;
+}
+
+.sidebar>.sidebar-third-div{
+    grid-template-rows: repeat(3, 25px);
+    align-items: end;
+}
+
 
 /* header section */
 .header{
@@ -122,25 +148,6 @@ html{
     font-size: 0.8rem;
 }
 
-.sidebar img{
-    width:25px;
-    height: 25px;
-    filter: invert(100%);
-}
-
-.sidebar-first-div img{
-    width:40px;
-    height:40px;
-}
-
-/* align icons and texts on the sidebar */
-.sidebar-first-div,
-.sidebar-second-div p,
-.sidebar-third-div p{
-    display: flex;
-    align-items: center;
-    gap:10px;
-}
 
 .profile-icon-smaller>img{
     width:40px;
