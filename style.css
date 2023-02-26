@@ -76,35 +76,94 @@ html{
     /* for the main layout */
     grid-column: 2/3;
     grid-row: 1/2;
+    padding:10px 40px;
 
     display:grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 450px;
     grid-template-rows: 40% 60%;
-}
-
-.header>*{
-    border: 1px blue solid;
 }
 
 .search-bar{
     grid-column: 1/2;
     grid-row: 1/2;
+
+    display:grid;
+    grid-template-columns: 30px 1fr;
+    gap:10px;
+    align-items: center;
 }
 
-.bell-area{
-    grid-column: 2/3;
-    grid-row: 1/2;
+.search-bar>input{
+    width:100%;
+    line-height: 30px;
+    border-radius: 10px;
+    appearance:none;
+    border: none;
+    background-color: #c7d2fe;
+}
+
+.bell-icon,
+.search-icon{
+    width:30px;
+    height:30px;
 }
 
 .user-greeting{
     grid-column: 1/2;
     grid-row: 2/3;
+
+    display:grid;
+    grid-template-columns: 70px max-content;
+    gap:10px;
+    align-items: center;
+}
+
+.hi-there>h5{
+    margin-bottom: 5px;
+}
+
+.profile-icon-bigger{
+    width:70px;
+    height:70px;
+}
+
+.bell-area{
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    display: grid;
+    grid-template-columns: 40px 60px max-content;
+    gap:15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-icon-smaller{
+    width:40px;
+    height:40px;
 }
 
 .button-area{
     grid-column: 2/3;
     grid-row: 2/3;
+
+    display:grid;
+    grid-template-columns: repeat(3, min-content);
+    align-items: center;
+    gap:15px;
+    justify-content: space-evenly;
 }
+
+.button-area>button{
+    padding:10px 30px;
+    color:white;
+    font-weight: bold;
+    background-color: #0ea5e9;
+    border-radius: 20px;
+    border:none;
+}
+
+
 
 /* main-content section */
 .main-content{
@@ -146,56 +205,6 @@ html{
 /* announce section */
 .announce-card>div>p{
     font-size: 0.8rem;
-}
-
-
-.profile-icon-smaller>img{
-    width:40px;
-    height:40px;
-}
-
-.profile-icon-bigger>img{
-    width:70px;
-    height:70px;
-}
-
-.bell-icon>img,
-.search-bar>img{
-    width:30px;
-    height:30px;
-}
-
-.search-bar,
-.bell-area,
-.user-greeting{
-    display:flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.search-bar>input{
-    width:70%;
-
-    line-height: 30px;
-    border-radius: 10px;
-    appearance:none;
-    border: none;
-    background-color: #c7d2fe;
-}
-
-.button-area{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.button-area>button{
-    padding:10px 30px;
-    color:white;
-    font-weight: bold;
-    background-color: #0ea5e9;
-    border-radius: 20px;
-    border:none;
 }
 
 .card{
