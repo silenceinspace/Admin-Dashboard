@@ -135,6 +135,7 @@ html{
     grid-template-columns: 40px 60px max-content;
     gap:15px;
     align-items: center;
+    justify-items: center;
     justify-content: center;
 }
 
