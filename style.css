@@ -61,6 +61,13 @@ html{
     align-items: end;
 }
 
+.sidebar-second-div>p:hover,
+.sidebar-third-div>p:hover{
+    cursor:pointer;
+    color:#155e75;
+    text-decoration: underline;
+}
+
 .sidebar img{
     justify-self: center;
 }
@@ -69,7 +76,6 @@ html{
     grid-template-rows: repeat(3, 25px);
     align-items: end;
 }
-
 
 /* header section */
 .header{
@@ -94,12 +100,21 @@ html{
 }
 
 .search-bar>input{
+    font-family: inherit;
+    font-size: 100%;
+
     width:100%;
     line-height: 30px;
+    padding: 0 5px;
     border-radius: 10px;
     appearance:none;
     border: none;
     background-color: #c7d2fe;
+}
+
+.search-bar>input:focus{
+    border:3px solid #0ea5e9;
+    outline: none;
 }
 
 .bell-icon,
@@ -162,6 +177,11 @@ html{
     background-color: #0ea5e9;
     border-radius: 20px;
     border:none;
+}
+
+.button-area>button:hover{
+    background-color: #155e75;
+    cursor: pointer;
 }
 
 
