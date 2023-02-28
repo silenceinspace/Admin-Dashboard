@@ -79,7 +79,6 @@ html{
 
 /* header section */
 .header{
-    /* for the main layout */
     grid-column: 2/3;
     grid-row: 1/2;
     padding:10px 40px;
@@ -187,20 +186,19 @@ html{
 
 /* main-content section */
 .main-content{
-    /* for the overall layout */
     background-color: #c7d2fe;
     padding:80px 30px 80px 25px; 
-    gap:20px;
     grid-column: 2/3;
     grid-row: 2/3;
-
+    
     display:grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
+    gap:20px;
     position: relative;
 }
 
-.main-content::before{ /*shadow between a header and main-content*/
+.main-content::before{ /*shadow between header and main-content*/
     position:absolute;
     top:0;
     left:0;
@@ -255,14 +253,13 @@ html{
 
 
 /* announcements and trending sections */
-
 .wrapper{
     grid-column: 2/3;
     grid-row: 1/3;
 
-    position:relative;
     display:grid;
     grid-template-rows: 325px 325px;
+    position:relative;
 }
 
 .wrapper>h2{
@@ -336,9 +333,6 @@ html{
 
 @media(max-width:768px){
     .main-container{
-        display:flex;
-        flex-direction: column;
-
         display:grid;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: max-content 1fr;
@@ -352,23 +346,16 @@ html{
     .header{
         grid-column: 2/3;
         grid-row: 1/2;
-    }
 
-    .main-content{
-        grid-column: 1/3;
-        grid-row: 2/3;
-    }
-
-    .header{
         display:flex;
         flex-direction: column;
         gap:30px;
     }
-
+    
     .bell-area{
         order:1;
     }
-
+    
     .search-bar{
         order:2;
     }
@@ -377,7 +364,7 @@ html{
         order:3;
         margin-top: 30px;
     }
-
+    
     .button-area{
         order:4;
         display: flex;
@@ -386,6 +373,9 @@ html{
     }
 
     .main-content{
+        grid-column: 1/3;
+        grid-row: 2/3;
+
         display: flex;
         flex-direction: column;
     }
@@ -400,7 +390,7 @@ html{
     }
 
     .wrapper>h2{
-        margin-top: 40px;
+        top:0;
     }
 
     .wrapper{
@@ -413,9 +403,5 @@ html{
         grid-template-rows: 100px 100px;
         align-items: center;
     }
-
 }
-
-/* Try make usage of auto-fit+minmax() to expand or shrink cards without media queries*/
-
 
